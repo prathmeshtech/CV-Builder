@@ -44,7 +44,6 @@ function generateCV() {
     document.getElementById("addressT").innerHTML = document.getElementById("address").value;
 
     document.getElementById("linkedinT").innerHTML = document.getElementById("linkedin").value;
-    document.getElementById("githubT").innerHTML = document.getElementById("github").value;
 
 
 }
