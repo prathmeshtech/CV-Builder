@@ -15,8 +15,10 @@
         <title>CV Builder</title>
     </head>
     <body>
+
+
         <!--Html Code Goes Here-->
-        <div class="container">
+        <div class="container" id="cv-form">
         <h1 class="text-center my-2">CV Builder</h1>
         <p class="text-center">Fill The Information</p>
         <div class="row">
@@ -68,11 +70,13 @@
                     <button onclick="addWE()" class="btn btn-primary btn-sm">ADD</button>
                 </div>
                 </div>
-
+ 
 
                 <div class="form-group mt-2" id="aq">
                     <label for="academic">Academic Qualification</label><br>
-                    <textarea placeholder="Enter here" class="form-control aqField" row="3" cols="50"></textarea>
+                    <textarea placeholder="Enter here" 
+                    class="form-control aqField" 
+                    row="3" cols="50"></textarea>
                 <!--new qualification textarea-->
                 <div class="container  text-center mt-2" id="aqAddButton">
                     <button onclick="addAQ()" class="btn btn-primary btn-sm">ADD</button>
@@ -82,10 +86,103 @@
             </div>
         </div>
         <div class="container  text-center mt-2">
-            <button class="btn btn-primary btn-lg">Generate CV</button>
+            <button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
         </div>
         </div>
 
+
+
+        
+
+        <!--cv template-->
+        <div class="container" id="cv-template">
+            <div class="row">
+                <div class="col-md-4 text-center py-5 background">
+                    <!--FIRST COLUMN-->
+                    <img src="https://st4.depositphotos.com/7486768/19781/v/1600/depositphotos_197819990-stock-illustration-profile-anonymous-face-icon-gray.jpg" 
+                         alt=""
+                         class="img-fluid myimg">
+                    
+                    <div class="container">
+                        <p id="nameT1">Prathmesh Ganesh Singh</p>
+                        <p id="contactT">+919021039807</p>
+                        <p class="addressT">Pen,Raigad,Maharashtra,India</p>
+                        <hr/>
+
+                        <p><a id="linkedinT" href="#1">https://www.linkedin.com/in/prathmeshsingh85</a>
+                        </p>
+                        <p><a id="githubT" href="#2">https://www.github.com/prathmeshtech</a>
+                        </p>
+                    </div>
+                    
+                </div>
+                <div class="col-md-8">
+                <!--SECOND COLUMN-->
+                    <h1 id="nameT2" class="text-center" style="font-weight: 980">Prathmesh Singh
+                    </h1>
+
+                    <!--objective card-->
+
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3>Objective</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <p id="objectiveT">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi reprehenderit
+                                 assumenda laboriosam doloremque, sint iure libero illum voluptatibus adipisci dolore 
+                                 repellat nesciunt necessitatibus ad, animi minus? Incidunt eos voluptas at ducimus,
+                                  assumenda unde eaque aliquam consectetur, tempore nihil expedita architecto eligendi 
+                                  a consequuntur, iusto inventore laboriosam distinctio illo commodi excepturi.</p>
+                        </div>
+                    </div>
+
+                    <!--WORK EXPERIENCE-->
+
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3>Work Experience</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <ul id="weT">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                                     quisquam!</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                                     quisquam!</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                                     quisquam!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--ACADEMIC QUALIFICATION-->
+
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3>Academic Qualification</h3>
+
+                        </div>
+                        <div class="card-body">
+                            <ul id="aqT">
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                                     quisquam!</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                                     quisquam!</li>
+                                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta,
+                                     quisquam!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="container mt-3 text-center">
+                        <button onclick="printCV()" class="btn background">
+                            Print CV
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 

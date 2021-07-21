@@ -1,4 +1,4 @@
- alert("just testing");
+ //alert("just testing");
 function addWE(){
     console.log("adding new experience");
     let newNode = document.createElement("textarea");
@@ -9,7 +9,7 @@ function addWE(){
     newNode.setAttribute('placeholder','Enter here');
 
     let weOb=document.getElementById("we");
-    let weAddButtonOb = document.getElementById("weAddButton");
+    let weAddButtonOb = document.getElementById("weAddButton"); 
 
     weOb.insertBefore(newNode,weAddButtonOb);
 }
@@ -26,4 +26,25 @@ function addAQ(){
     let aqAddButtonOb = document.getElementById("aqAddButton");
 
     aqOb.insertBefore(newNode1,aqAddButtonOb);
+}
+
+//Generating CV
+function generateCV() {
+    let name = document.getElementById("name").value;
+    let nameT1 = document.getElementById("nameT1");
+    let nameT2 = document.getElementById("nameT2");
+
+
+    nameT1.innerHTML = name;
+    nameT2.innerHTML = name;
+
+    document.getElementById("contactT").innerHTML = document.getElementById("contactno").value;
+
+
+    document.getElementById("addressT").innerHTML = document.getElementById("address").value;
+
+    document.getElementById("linkedinT").innerHTML = document.getElementById("linkedin").value;
+    document.getElementById("githubT").innerHTML = document.getElementById("github").value;
+
+
 }
