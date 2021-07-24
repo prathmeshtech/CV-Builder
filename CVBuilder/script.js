@@ -34,16 +34,45 @@ function generateCV() {
     let nameT1 = document.getElementById("nameT1");
     let nameT2 = document.getElementById("nameT2");
 
-
     nameT1.innerHTML = name;
     nameT2.innerHTML = name;
 
     document.getElementById("contactT").innerHTML = document.getElementById("contactno").value;
 
-
     document.getElementById("addressT").innerHTML = document.getElementById("address").value;
 
     document.getElementById("linkedinT").innerHTML = document.getElementById("linkedin").value;
 
+    document.getElementById("githubT").innerHTML = document.getElementById("github").value;
 
+    document.getElementById("objectiveT").innerHTML = document.getElementById("objective").value;
+
+// WORK EXPERIENCE
+
+    let wes = document.getElementsByClassName("weField");
+    let str="";
+
+    for (let e of wes) {
+        str = str + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("weT").innerHTML=str;
+
+// ACADEMIC QUALIFICATION
+
+    let aqs = document.getElementsByClassName("aqField");
+    let str1="";
+
+    for (let e of aqs) {
+    str1 = str + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("aqT").innerHTML=str1;
+
+    document.getElementById("cv-form").style.display="none";
+    document.getElementById("cv-template").style.display="block";
+}
+
+function printCV() {
+    window.print();
 }
